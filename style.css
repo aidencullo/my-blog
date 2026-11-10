@@ -1,0 +1,85 @@
+:root {
+  --bg: #fdfdfc;
+  --text: #1a1a19;
+  --soft: #5c5c58;
+  --border: #e2e2dd;
+  --accent: #b3502b;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141413;
+    --text: #ecece8;
+    --soft: #a3a39c;
+    --border: #2e2e2a;
+    --accent: #e8835c;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  max-width: 42rem;
+  padding: 2.5rem 1.5rem 4rem;
+  background: var(--bg);
+  color: var(--text);
+  font: 1.0625rem/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-underline-offset: 3px; }
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand { font-weight: 700; color: var(--text); text-decoration: none; }
+.brand span { color: var(--accent); }
+
+nav { display: flex; gap: 1.25rem; font-size: 0.95rem; }
+nav a { color: var(--soft); text-decoration: none; }
+nav a:hover { color: var(--text); }
+
+h1 { font-size: clamp(1.9rem, 5vw, 2.4rem); letter-spacing: -0.02em; margin: 0 0 0.5rem; }
+h2 { font-size: 1.35rem; letter-spacing: -0.01em; margin: 2rem 0 0.75rem; }
+
+.lead { color: var(--soft); font-size: 1.1rem; margin: 0 0 3rem; }
+
+.posts { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--border); }
+.posts li { border-bottom: 1px solid var(--border); margin: 0; }
+.posts a { display: block; padding: 1.1rem 0; text-decoration: none; color: inherit; }
+.posts a:hover .title { color: var(--accent); }
+.title { display: block; font-weight: 600; font-size: 1.1rem; }
+.meta { display: block; color: var(--soft); font-size: 0.875rem; margin-top: 0.15rem; }
+.desc { display: block; color: var(--soft); font-size: 0.95rem; margin-top: 0.4rem; }
+
+.back { display: inline-block; margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--soft); text-decoration: none; }
+.back:hover { color: var(--accent); }
+
+article p, article ul { margin: 0 0 1.25rem; }
+article ul { padding-left: 1.4rem; }
+article li + li { margin-top: 0.35rem; }
+article code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.875em;
+  background: var(--border);
+  padding: 0.12em 0.35em;
+  border-radius: 4px;
+}
+article blockquote {
+  margin: 0 0 1.25rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--accent);
+  color: var(--soft);
+  font-style: italic;
+}
+
+footer { margin-top: 4rem; padding-top: 1.25rem; border-top: 1px solid var(--border); color: var(--soft); font-size: 0.875rem; }

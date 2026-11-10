@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Building this blog · My Blog</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="../">my<span>blog</span></a>
+      <nav>
+        <a href="../">Posts</a>
+        <a href="../about.html">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <a class="back" href="../">← All posts</a>
+      <article>
+        <h1>Building this blog</h1>
+        <p class="meta" style="margin-bottom: 2rem;">Nov 9, 2026</p>
+
+        <p>This site is deliberately boring: plain HTML and one CSS file. No build step, no framework, no dependencies.</p>
+
+        <h2>Why so simple?</h2>
+        <ul>
+          <li>Every page is a file you can open and read.</li>
+          <li>Deploying means copying a folder anywhere.</li>
+          <li>Nothing breaks when a dependency updates.</li>
+        </ul>
+
+        <h2>Adding a post</h2>
+        <p>Copy an existing file in <code>posts/</code>, change the title and text, then add a link to it in <code>index.html</code>. That's the whole workflow.</p>
+
+        <blockquote>The best publishing system is the one you'll actually use.</blockquote>
+      </article>
+    </main>
+
+    <footer>© 2026 My Blog</footer>
+  </body>
+</html>
